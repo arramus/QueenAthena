@@ -1,0 +1,81 @@
+<configs>
+	<append xpath="/entity_classes">
+	
+		<entity_class name="Zombie_AthenaTemplate" extends="zombieTemplateMale">
+			<property name="EntityType" value="Zombie" />
+			<!--property name="Mesh" value="Zombies/zombie01Ragdoll" /-->
+			<property name="Mesh" value=""/>
+			<property name="Prefab" value="Z"/>
+			<property name="Class" value="EntityZombie" />
+			<property name="Parent" value="Enemies" />
+			<property name="IsEnemyEntity" value="true" />
+			<property name="HandItem" value="meleeHandZombie01" />
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert" />
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense" />
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain" />
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath" />
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack" />
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+			<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
+			<property name="AttackTimeoutDay" value="1.5" />
+			<property name="AttackTimeoutNight" value="1.1" />
+			<property name="WalkType" value="7" />
+			<property name="ModelType" value="ZombieUMA" />
+			<property name="RootMotion" value="true" />
+			<property name="HasRagdoll" value="true" />
+			<!--property name="AvatarController" value="AvatarZombieUMAController" /-->
+			<property name="PhysicsBody" value="zombieUMA" />
+			<property name="HasDeathAnim" value="false" />
+			<property name="TimeStayAfterDeath" value="30" />
+		</entity_class>	
+	
+	
+		<entity_class name="zombieAthena" extends="Zombie_AthenaTemplate">
+			<property name="Archetype" value="Athena" />
+			<property name="Tags" value="entity,zombie,walker,boss,umazombie" />
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+			<property name="LootDropProb" value=".33"/>			
+			<property name="ExperienceGain" value="1300"/>
+			<property name="HandItem" value="meleeHandQueenAthena"/>
+			<property name="SurfaceCategory" value="organic"/>
+			
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemalescoutroam"/>
+			<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>			
+			
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="AIPathCostScale" value=".6, 1"/>
+			<property name="AITask-1" value="Leap"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="DestroyArea"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="ApproachDistraction"/>
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-7" value="ApproachSpot"/>
+			<property name="AITask-8" value="Look"/>
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>
+
+			<!-- Gameplay zombieSpider -->
+			<property name="WalkType" value="8"/>			
+			<property name="MoveSpeed" value="0.95"/>
+			<property name="MoveSpeedAggro" value="1.125, 1.5"/> <!-- slim, regular -->
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="SwimSpeed" value="1.3"/>
+			<property name="SwimStrokeRate" value="1.5,1.7"/>
+			<property name="CanClimbVertical" value="true"/>
+			<property name="JumpMaxDistance" value="7, 11"/>			
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1100"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieAthenaDeco"/>				
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>		
+		</entity_class>		
+	</append>
+</configs>

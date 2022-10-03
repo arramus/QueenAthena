@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/buffs">
+		<buff name="zombieAthenaDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab" local_offset="-0.22,0,0.1" local_rotation="15,0,30" parent_transform="Head"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab" local_offset="0.15,0.1,-0.1" local_rotation="15,-90,30" parent_transform="RightShoulder"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab" local_offset="0.15,-0.1,-0.1" local_rotation="15,-90,30" parent_transform="LeftShoulder"/>
+			</effect_group>
+		</buff>		
+	</append>
+</configs>

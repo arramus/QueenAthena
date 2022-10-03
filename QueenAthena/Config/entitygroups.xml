@@ -1,0 +1,7 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieDemolition']]">	
+		<entity name="zombieAthena" />
+	</append>
+
+</configs>
