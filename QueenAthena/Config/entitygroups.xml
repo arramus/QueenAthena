@@ -3,5 +3,9 @@
 	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieDemolition']]">	
 		<entity name="zombieAthena" />
 	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieScouts']">
+		<entity name="zombieAthena"/>
+	</append>
 
 </configs>

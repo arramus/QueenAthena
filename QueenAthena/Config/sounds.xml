@@ -1,0 +1,21 @@
+<configs>
+
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutalert']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutalert']/HighestPitch/@name">1.3</set>
+	
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutattack']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutattack']/HighestPitch/@name">1.3</set>
+	
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutdeath']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutdeath']/HighestPitch/@name">1.3</set>
+	
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutpain']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutpain']/HighestPitch/@name">1.3</set>
+
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutroam']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutroam']/HighestPitch/@name">1.3</set>	
+	
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutsense']/LowestPitch/@name">1.25</set>
+	<set xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutsense']/HighestPitch/@name">1.3</set>
+	
+</configs>
